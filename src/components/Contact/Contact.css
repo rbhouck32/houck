@@ -1,0 +1,54 @@
+.container.contact {
+  width: 85%;
+  height: vh 1;
+  background-color: #1d1d1d;
+  border-left: 1px solid rgba(144, 144, 150, 0.25);
+  display: flex;
+  flex-flow: column;
+}
+
+.container.contact h1 {
+  margin-top: 13%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+}
+.form-container {
+  margin-left: 5%;
+}
+
+input {
+  width: 600px;
+  margin-bottom: 2%;
+}
+
+textarea {
+  height: 10em;
+  width: 600px;
+}
+
+.submit-btn {
+  margin-top: 2%;
+  width: 200px;
+  color: rgba(27, 146, 67, 0.75);
+  height: 50px;
+  border: 0.5px solid rgba(27, 146, 67, 0.75);
+  border-radius: 5%;
+  background-color: #1d1d1d;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: rgba(27, 146, 67, 0.75);
+  border: 2px solid #181818;
+  color: #1d1d1d;
+}
+
+div[role="alert"] {
+  color: rgb(134, 50, 50);
+  margin-bottom: 1em;
+}

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 import portrait from "../../images/portrait.webp";
 import "../Home/Home.css";
@@ -11,29 +12,36 @@ const Home = () => {
   let circleGreen = useRef(null);
   let circleBlack = useRef(null);
   let contactButton = useRef(null);
+  let scrollPortrait = useRef(null);
 
   useEffect(() => {
+    TweenMax.to(scrollPortrait, 6, {
+      opacity: 1,
+      y: 45,
+      ease: Power3.easeOut,
+      delay: 0.2,
+    });
     TweenMax.to(textHeader, 6, {
       opacity: 1,
-      y: 300,
+      y: 175,
       ease: Power3.easeOut,
       delay: 0.2,
     });
     TweenMax.to(textSubHeader, 6, {
       opacity: 1,
-      y: 300,
+      y: 175,
       ease: Power3.easeOut,
       delay: 0.2,
     });
     TweenMax.to(contactButton, 6, {
       opacity: 1,
-      y: 300,
+      y: 175,
       ease: Power3.easeOut,
       delay: 0.2,
     });
     TweenMax.to(circleScroll, 6, {
       opacity: 1,
-      y: 300,
+      y: 175,
       ease: Power3.easeOut,
       delay: 0.2,
     });
@@ -119,12 +127,20 @@ const Home = () => {
           }}
           className="contact-button"
         >
-          <p>Contact me!</p>
+          <NavLink style={{ textDecoration: "none" }} to="/contact">
+            <p>Contact me!</p>
+          </NavLink>
         </div>
       </div>
 
       <div className="content-right">
-        <img src={portrait} alt="self-portrait" />
+        <img
+          src={portrait}
+          alt="self-portrait"
+          ref={(e) => {
+            scrollPortrait = e;
+          }}
+        />
       </div>
     </div>
   );

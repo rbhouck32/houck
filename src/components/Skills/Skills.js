@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import "../Skills/Skills.css";
 
 import { TweenMax, Power3 } from "gsap";
@@ -15,6 +15,7 @@ import {
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
+  let headerScroll = useRef(null);
   let skillsScroll1 = useRef(null);
   let skillsScroll2 = useRef(null);
   let skillsScroll3 = useRef(null);
@@ -36,6 +37,7 @@ const Skills = () => {
   useEffect(() => {
     TweenMax.staggerFrom(
       [
+        headerScroll,
         skillsScroll1,
         skillsScroll2,
         skillsScroll3,
@@ -45,17 +47,20 @@ const Skills = () => {
         skillsScroll7,
         skillsScroll8,
       ],
-      0.8,
+      4,
       {
         opacity: 0,
         x: 40,
         ease: Power3.easeOut,
       },
-      0.2
+      0.25
     );
   }, []);
   return (
     <div className="container skills">
+      <div className="header-wrap">
+        <h1 ref={(e) => (headerScroll = e)}>My Skills</h1>
+      </div>
       <div className="skills-container">
         <div ref={(e) => (skillsScroll1 = e)} className="skill-wrap">
           <FontAwesomeIcon icon={faHtml5} className="icon" size="6x" />
