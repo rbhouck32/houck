@@ -58,13 +58,11 @@
 input {
   width: 75%;
   margin-bottom: 2%;
-  opacity: 75%;
 }
 
 textarea {
   height: 10em;
   width: 75%;
-  opacity: 75%;
 }
 
 .submit-btn {
