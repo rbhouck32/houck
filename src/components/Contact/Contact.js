@@ -1,11 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+
+/* eslint-disable import/first */
+import { init, sendForm } from "emailjs-com";
+init("user_IDm9aKjhTDchdKwj6UBRA");
 
 import { TweenMax, Power3 } from "gsap";
 
 import "../Contact/Contact.css";
 
 const Contact = () => {
+  const [contactNumber, setContactNumber] = useState("000000");
+  const generateContactNumber = () => {
+    const numStr = "000000" + ((Math.random() * 1000000) | 0);
+    setContactNumber(numStr.substring(numStr.length - 6));
+  };
   // react hook forms variables
 
   const {
@@ -16,8 +25,23 @@ const Contact = () => {
     watch,
   } = useForm();
 
-  const onSubmit = (data, e) => {
-    console.log(data);
+  const formRef = useRef();
+
+  const onSubmit = (data) => {
+    console.log("data submit", data);
+    generateContactNumber();
+    sendForm("default_service", "template_86v5uzu", "#contact-form")
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      )
+      .catch((error) => {
+        console.log(error);
+      });
     reset();
   };
   const message = watch("message") || "";
@@ -40,14 +64,15 @@ const Contact = () => {
       0.25
     );
   }, []);
-
+  console.log("formRef contact.js", formRef);
   return (
     <div className="container contact">
       <div ref={(e) => (formScroll = e)} className="form-container">
         <div className="header-wrap">
           <h1 ref={(e) => (headerScroll = e)}>Contact</h1>
         </div>
-        <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+        <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)}>
+          <input type="hidden" name="contact_number" value={contactNumber} />
           {errors.user_name && errors.user_name.type === "required" && (
             <div role="alert">
               **Name is required
@@ -83,7 +108,9 @@ const Contact = () => {
             {messageCharsLeft} characters left
           </p>
           <br />
-          <button className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn">
+            Send
+          </button>
         </form>
       </div>
       <div ref={(e) => (informationScroll = e)} className="information">

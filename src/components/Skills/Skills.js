@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import "../Skills/Skills.css";
 
+/* eslint-disable import/first */
+import { init, sendForm } from "emailjs-com";
+init("user_IDm9aKjhTDchdKwj6UBRA");
+
 import { TweenMax, Power3 } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
