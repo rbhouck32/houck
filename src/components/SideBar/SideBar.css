@@ -31,7 +31,7 @@
 }
 
 .nav-item p {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   color: rgba(144, 144, 150, 0.75);
   padding: 12.5%;

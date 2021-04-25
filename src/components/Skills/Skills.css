@@ -24,9 +24,54 @@
 }
 
 .skill-wrap {
-  width: 100%;
   height: 100%;
 }
+.icon-wrap {
+  justify-content: center;
+}
+.skill-label {
+  width: 100px;
+  padding-top: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.skill-label.html {
+  text-align: center;
+}
+
+.skill-label.react {
+  text-align: center;
+}
+
 .content-right {
   opacity: 30%;
+}
+
+.skills-list {
+  margin-left: 5%;
+  line-height: 2;
+  width: 45%;
+  display: flex;
+}
+
+.left-list {
+  padding-top: 48px;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-right: 120px;
+}
+.right-list {
+  padding-top: 48px;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.right-list span {
+  font-size: 8px;
 }
