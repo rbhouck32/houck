@@ -12,7 +12,6 @@ const Home = () => {
   let circleGreen = useRef(null);
   let circleBlack = useRef(null);
   let contactButton = useRef(null);
-  let scrollPortrait = useRef(null);
 
   useEffect(() => {
     TweenMax.to(textHeader, 6, {
@@ -119,13 +118,7 @@ const Home = () => {
       </div>
 
       <div className="content-right">
-        <img
-          src={portrait}
-          alt="self-portrait"
-          ref={(e) => {
-            scrollPortrait = e;
-          }}
-        />
+        <img src={portrait} alt="self-portrait" />
       </div>
     </div>
   );
