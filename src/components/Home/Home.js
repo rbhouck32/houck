@@ -15,11 +15,6 @@ const Home = () => {
   let scrollPortrait = useRef(null);
 
   useEffect(() => {
-    TweenMax.to(scrollPortrait, 6, {
-      y: 45,
-      ease: Power3.easeOut,
-      delay: 0.2,
-    });
     TweenMax.to(textHeader, 6, {
       opacity: 1,
       y: 175,
@@ -61,15 +56,6 @@ const Home = () => {
       ease: Power3.easeOut,
       delay: 0.4,
     });
-    // TweenMax.staggerFrom(
-    //   [circleGray, circleGreen, circleBlack],
-    //   {
-    //     opacity: 0,
-    //     x: 40,
-    //     ease: Power3.easeOut,
-    //   },
-    //   0.2
-    // );
   }, []);
 
   return (
