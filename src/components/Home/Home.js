@@ -16,7 +16,6 @@ const Home = () => {
 
   useEffect(() => {
     TweenMax.to(scrollPortrait, 6, {
-      opacity: 0,
       y: 45,
       ease: Power3.easeOut,
       delay: 0.2,
