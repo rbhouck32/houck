@@ -7,6 +7,7 @@ import Home from "./components/Home/Home.js";
 import Skills from "./components/Skills/Skills.js";
 import Contact from "./components/Contact/Contact.js";
 import SideBar from "./components/SideBar/SideBar.js";
+import About from "./components/About/About.js";
 
 import "./App.css";
 
@@ -29,6 +30,7 @@ function App() {
 
       <Route path="/skills" component={Skills} />
       <Route path="/contact" component={Contact} />
+      <Route path="/about" component={About} />
     </div>
   );
 }
