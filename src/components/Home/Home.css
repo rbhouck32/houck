@@ -100,4 +100,5 @@
 
 .content-right img {
   border-radius: 8px;
+  z-index: 1000;
 }
