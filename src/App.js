@@ -8,6 +8,7 @@ import Skills from "./components/Skills/Skills.js";
 import Contact from "./components/Contact/Contact.js";
 import SideBar from "./components/SideBar/SideBar.js";
 import About from "./components/About/About.js";
+import Work from "./components/Work/Work.js";
 
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
       <Route path="/skills" component={Skills} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
+      <Route path="/work" component={Work} />
     </div>
   );
 }
