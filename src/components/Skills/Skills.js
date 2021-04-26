@@ -62,16 +62,16 @@ const Skills = () => {
         <h1 ref={(e) => (headerScroll = e)}>My Skills</h1>
       </div>
       <div className="skills-container">
-        <div ref={(e) => (skillsScroll1 = e)} className="skill-wrap first">
+        <div ref={(e) => (skillsScroll1 = e)} className="skill-wrap">
           <FontAwesomeIcon icon={faHtml5} className="icon" size="6x" />
-          <div className="skill-label">
+          <div className="skill-label html">
             <p>HTML5</p>
           </div>
         </div>
 
         <div ref={(e) => (skillsScroll2 = e)} className="skill-wrap">
           <FontAwesomeIcon icon={faJs} className="icon" size="6x" />
-          <div className="skill-label">
+          <div className="skill-label js">
             <p>JavaScript</p>
           </div>
         </div>

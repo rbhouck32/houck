@@ -44,7 +44,6 @@ const Contact = () => {
   // on submit handler for form
   const onSubmit = (data) => {
     console.log("data submit", data);
-
     generateContactNumber();
     sendForm("default_service", "template_86v5uzu", "#contact-form")
       .then(

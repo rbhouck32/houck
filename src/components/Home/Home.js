@@ -117,7 +117,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="content-right">
+      <div className="hero-image">
         <img src={portrait} alt="self-portrait" />
       </div>
     </div>
