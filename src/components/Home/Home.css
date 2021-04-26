@@ -96,9 +96,12 @@
 
 .content-right {
   margin-top: 10%;
+  background-color: white;
+  height: 502px;
+  border-radius: 12px;
 }
 
 .content-right img {
-  border-radius: 8px;
-  z-index: 1000;
+  width: 100%;
+  border-radius: 12px;
 }

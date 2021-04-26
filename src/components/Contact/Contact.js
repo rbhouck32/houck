@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import { useForm } from "react-hook-form";
+import ReCAPTCHA from "react-google-recaptcha";
 
 /* eslint-disable import/first */
 import { init, sendForm } from "emailjs-com";
@@ -11,24 +13,38 @@ import "../Contact/Contact.css";
 
 const Contact = () => {
   const [contactNumber, setContactNumber] = useState("000000");
+
   const generateContactNumber = () => {
     const numStr = "000000" + ((Math.random() * 1000000) | 0);
     setContactNumber(numStr.substring(numStr.length - 6));
   };
   // react hook forms variables
-
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
     watch,
-  } = useForm();
+  } = useForm({ mode: "onChange" });
 
-  const formRef = useRef();
+  // Captcha Implementation -----------
+  let captcha;
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+  const setCaptchaRef = (ref) => {
+    if (ref) {
+      return (captcha = ref);
+    }
+  };
+  const resetCaptcha = () => {
+    captcha.reset();
+  };
 
+  // on submit handler for form
   const onSubmit = (data) => {
     console.log("data submit", data);
+
     generateContactNumber();
     sendForm("default_service", "template_86v5uzu", "#contact-form")
       .then(
@@ -42,8 +58,10 @@ const Contact = () => {
       .catch((error) => {
         console.log(error);
       });
+    resetCaptcha();
     reset();
   };
+
   const message = watch("message") || "";
   const messageCharsLeft = 1500 - message.length;
 
@@ -64,14 +82,14 @@ const Contact = () => {
       0.25
     );
   }, []);
-  console.log("formRef contact.js", formRef);
+
   return (
     <div className="container contact">
       <div ref={(e) => (formScroll = e)} className="form-container">
         <div className="header-wrap">
           <h1 ref={(e) => (headerScroll = e)}>Contact</h1>
         </div>
-        <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)}>
+        <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
           <input type="hidden" name="contact_number" value={contactNumber} />
           {errors.user_name && errors.user_name.type === "required" && (
             <div role="alert">
@@ -108,7 +126,16 @@ const Contact = () => {
             {messageCharsLeft} characters left
           </p>
           <br />
-          <button type="submit" className="submit-btn">
+          <ReCAPTCHA
+            className="g-recaptcha"
+            sitekey="6LfSsLkaAAAAAKTFhslKNmQsDAeZzUf9HYoPIRjz"
+            size="compact"
+            onChange={onChange}
+            ref={(r) => setCaptchaRef(r)}
+          />
+          <br />
+
+          <button data-action="submit" type="submit" className="submit-btn">
             Send
           </button>
         </form>
