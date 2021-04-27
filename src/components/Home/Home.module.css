@@ -1,4 +1,4 @@
-.container.home {
+.container {
   width: 85%;
   height: 100vh;
   background-color: #1d1d1d;
@@ -6,32 +6,32 @@
   display: flex;
 }
 
-.content-left {
+.contentLeft {
   width: 45%;
   height: 100%;
   margin-left: 5%;
 }
 
-.content-left h1 {
+.contentLeft h1 {
   margin-bottom: 5%;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: 4rem;
   color: rgb(255, 255, 255);
 }
-.content-left p {
+.contentLeft p {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.5rem;
   color: rgba(144, 144, 150, 0.75);
   margin: 2% 0;
 }
 
-.circle-container {
+.circleContainer {
   height: 15%;
   display: flex;
 }
 
-.circle.gray {
+.gray {
   margin-top: 2%;
   margin-right: 5%;
   width: 50px;
@@ -39,12 +39,12 @@
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 100%;
 }
-.circle.gray:hover {
+.gray:hover {
   width: 60px;
   height: 60px;
 }
 
-.circle.green {
+.green {
   margin-top: 2%;
   margin-right: 5%;
   width: 50px;
@@ -52,12 +52,12 @@
   background-color: rgba(27, 146, 67, 0.75);
   border-radius: 100%;
 }
-.circle.green:hover {
+.green:hover {
   width: 60px;
   height: 60px;
 }
 
-.circle.black {
+.black {
   margin-top: 2%;
   margin-right: 5%;
   width: 50px;
@@ -66,12 +66,12 @@
   border-radius: 100%;
 }
 
-.circle.black:hover {
+.black:hover {
   width: 60px;
   height: 60px;
 }
 
-.contact-button {
+.btn {
   text-align: center;
   width: 200px;
   height: 50px;
@@ -79,29 +79,26 @@
   border-radius: 5%;
 }
 
-.contact-button p {
+.btn p {
   color: rgba(27, 146, 67, 0.75);
   font-weight: bold;
   margin: 5%;
 }
 
-.contact-button:hover {
+.btn:hover {
   background-color: rgba(27, 146, 67, 0.75);
   border: 2px solid #181818;
 }
 
-.contact-button p:hover {
+.btn p:hover {
   color: #181818;
 }
 
-.content-right {
-  margin-top: 10%;
-  background-color: white;
-  height: 502px;
+.heroImg {
   border-radius: 12px;
 }
 
-.hero-image img {
+.heroImg img {
   margin-top: 35%;
   width: 100%;
   border-radius: 12px;

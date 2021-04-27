@@ -9,7 +9,7 @@ init("user_IDm9aKjhTDchdKwj6UBRA");
 
 import { TweenMax, Power3 } from "gsap";
 
-import "../Contact/Contact.css";
+import ContactCSS from "../Contact/Contact.module.css";
 
 const Contact = () => {
   const [contactNumber, setContactNumber] = useState("000000");
@@ -83,9 +83,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="container contact">
-      <div ref={(e) => (formScroll = e)} className="form-container">
-        <div className="header-wrap">
+    <div className={ContactCSS.container}>
+      <div ref={(e) => (formScroll = e)} className={ContactCSS.formContainer}>
+        <div className={ContactCSS.headerWrap}>
           <h1 ref={(e) => (headerScroll = e)}>Contact</h1>
         </div>
         <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
@@ -121,7 +121,7 @@ const Contact = () => {
             name="message"
             placeholder="Message"
           />
-          <p className="message-chars-left">
+          <p className={ContactCSS.messageChars}>
             {messageCharsLeft} characters left
           </p>
           <br />
@@ -134,19 +134,22 @@ const Contact = () => {
           />
           <br />
 
-          <button data-action="submit" type="submit" className="submit-btn">
+          <button data-action="submit" type="submit" className={ContactCSS.btn}>
             Send
           </button>
         </form>
       </div>
-      <div ref={(e) => (informationScroll = e)} className="information">
+      <div
+        ref={(e) => (informationScroll = e)}
+        className={ContactCSS.information}
+      >
         <h3> My Information</h3>
         <p>Robert Houck</p>
         <a style={{ textDecoration: "none" }} href="mailto:rbhouck32@gmail.com">
-          <p className="email">Email: rbhouck32@gmail.com</p>
+          <p className={ContactCSS.email}>Email: rbhouck32@gmail.com</p>
         </a>
         <a style={{ textDecoration: "none" }} href="tel:440-829-3737">
-          <p className="phone">Phone: 440-829-3737</p>
+          <p className={ContactCSS.phone}>Phone: 440-829-3737</p>
         </a>
       </div>
     </div>

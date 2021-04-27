@@ -5,32 +5,28 @@
   opacity: 0.25;
 }
 
-.logo-container:hover {
+.logoContainer:hover {
   background-color: rgba(144, 144, 150, 0.25);
 }
 
-.SideBar {
+.sideBar {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #181818;
 }
-.spacer {
-  height: 20%;
-  background-color: rgba(144, 144, 150, 0.25);
-}
 
-.nav-item {
+.navItem {
   border-top: 1px solid rgba(144, 144, 150, 0.25);
 }
 
-.nav-item:hover {
+.navItem:hover {
   background-color: rgba(144, 144, 150, 0.25);
   color: rgba(27, 146, 67, 0.75);
 }
 
-.nav-item p {
+.navItem p {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   color: rgba(144, 144, 150, 0.75);
@@ -38,17 +34,13 @@
   text-decoration: none;
 }
 
-.nav-item p:hover {
+.navItem p:hover {
   color: rgba(27, 146, 67, 0.75);
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.bottom-spacer {
-  border-top: 1px solid rgba(144, 144, 150, 0.25);
-}
-
-.icons {
+.iconContainer {
   display: flex;
   justify-content: space-evenly;
 

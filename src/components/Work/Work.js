@@ -1,9 +1,9 @@
 import React from "react";
-import "../Work/Work.css";
+import WorkCSS from "../Work/Work.module.css";
 
 const Work = () => {
   return (
-    <div className="container work">
+    <div className={WorkCSS.container}>
       <h1>My Work</h1>
     </div>
   );

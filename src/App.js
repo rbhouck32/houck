@@ -26,9 +26,7 @@ function App() {
       className="App"
     >
       <SideBar />
-
       <Route exact path="/" component={Home} />
-
       <Route path="/skills" component={Skills} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />

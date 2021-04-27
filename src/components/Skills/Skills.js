@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "../Skills/Skills.css";
+import SkillsCSS from "../Skills/Skills.module.css";
 
 import { TweenMax, Power3 } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,15 +25,6 @@ const Skills = () => {
   let skillsScroll7 = useRef(null);
   let skillsScroll8 = useRef(null);
 
-  //   const [isShown, setIsShown] = useState(false);
-
-  //   const onEnterHandler = () => {
-  //     setIsShown(true);
-  //   };
-  //   const onLeaveHandler = () => {
-  //     setIsShown(false);
-  //   };
-
   useEffect(() => {
     TweenMax.staggerFrom(
       [
@@ -57,85 +48,90 @@ const Skills = () => {
     );
   }, []);
   return (
-    <div className="container skills">
-      <div className="header-wrap">
+    <div className={SkillsCSS.container}>
+      <div className={SkillsCSS.headerWrap}>
         <h1 ref={(e) => (headerScroll = e)}>My Skills</h1>
       </div>
-      <div className="skills-container">
-        <div ref={(e) => (skillsScroll1 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faHtml5} className="icon" size="6x" />
-          <div className="skill-label html">
+      <div className={SkillsCSS.skillsContainer}>
+        <div ref={(e) => (skillsScroll1 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon
+            icon={faHtml5}
+            className={SkillsCSS.icon}
+            size="6x"
+          />
+          <div className={SkillsCSS.skillLabel}>
             <p>HTML5</p>
           </div>
         </div>
 
-        <div ref={(e) => (skillsScroll2 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faJs} className="icon" size="6x" />
-          <div className="skill-label js">
+        <div ref={(e) => (skillsScroll2 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon icon={faJs} className={SkillsCSS.icon} size="6x" />
+          <div className={SkillsCSS.skillLabel}>
             <p>JavaScript</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll3 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faReact} className="icon" size="6x" />
-          <div className="skill-label react">
+        <div ref={(e) => (skillsScroll3 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon
+            icon={faReact}
+            className={SkillsCSS.icon}
+            size="6x"
+          />
+          <div className={SkillsCSS.skillLabel}>
             <p>React</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll4 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faNode} className="icon" size="6x" />
-          <div className="skill-label node">
+        <div ref={(e) => (skillsScroll4 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon icon={faNode} className={SkillsCSS.icon} size="6x" />
+          <div className={SkillsCSS.skillLabel}>
             <p>NodeJs</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll5 = e)} className="skill-wrap">
-          <div className="icon-wrap">
-            <FontAwesomeIcon icon={faLess} className="icon" size="6x" />
+        <div ref={(e) => (skillsScroll5 = e)} className={SkillsCSS.skillWrap}>
+          <div className={SkillsCSS.iconWrap}>
+            <FontAwesomeIcon
+              icon={faLess}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
           </div>
-          <div className="skill-label less">
+          <div className={SkillsCSS.skillLabel}>
             <p>LESS</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll6 = e)} className="skill-wrap">
-          <div className="icon-wrap python">
-            <FontAwesomeIcon icon={faPython} className="icon" size="6x" />
+        <div ref={(e) => (skillsScroll6 = e)} className={SkillsCSS.skillWrap}>
+          <div className={SkillsCSS.iconWrap}>
+            <FontAwesomeIcon
+              icon={faPython}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
           </div>
 
-          <div className="skill-label">
+          <div className={SkillsCSS.skillLabel}>
             <p>Python</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll7 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faDatabase} className="icon" size="6x" />
-          <div className="skill-label">
+        <div ref={(e) => (skillsScroll7 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon
+            icon={faDatabase}
+            className={SkillsCSS.icon}
+            size="6x"
+          />
+          <div className={SkillsCSS.skillLabel}>
             <p>RDBMS</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll8 = e)} className="skill-wrap">
-          <FontAwesomeIcon icon={faCss3Alt} className="icon" size="6x" />
-          <div className="skill-label">
+        <div ref={(e) => (skillsScroll8 = e)} className={SkillsCSS.skillWrap}>
+          <FontAwesomeIcon
+            icon={faCss3Alt}
+            className={SkillsCSS.icon}
+            size="6x"
+          />
+          <div className={SkillsCSS.skillLabel}>
             <p>CSS3</p>
           </div>
         </div>
       </div>
-      {/* <section className="lower-content">
-        <div className="skills-list">
-          <ul className="left-list">
-            <li>HTML5</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>NodeJS</li>
-          </ul>
-          <ul className="right-list">
-            <li>LESS</li>
-            <li>Python</li>
-            <li>RDBMS</li>
-            <li>CSS3</li>
-          </ul>
-        </div>
-        <div className="right-lower">
-          <h2></h2>
-        </div>
-      </section> */}
     </div>
   );
 };

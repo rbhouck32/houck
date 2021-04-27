@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { TweenMax, Power3 } from "gsap";
 import portrait from "../../images/portrait.webp";
-import "../Home/Home.css";
+import HomeCSS from "../Home/Home.module.css";
 
 const Home = () => {
   let textHeader = useRef(null);
@@ -58,8 +58,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container home">
-      <div className="content-left">
+    <div className={HomeCSS.container}>
+      <div className={HomeCSS.contentLeft}>
         <h1
           ref={(e) => {
             textHeader = e;
@@ -84,22 +84,22 @@ const Home = () => {
           ref={(e) => {
             circleScroll = e;
           }}
-          className="circle-container"
+          className={HomeCSS.circleContainer}
         >
           <div
-            className="circle gray"
+            className={HomeCSS.gray}
             ref={(e) => {
               circleGray = e;
             }}
           ></div>
           <div
-            className="circle green"
+            className={HomeCSS.green}
             ref={(e) => {
               circleGreen = e;
             }}
           ></div>
           <div
-            className="circle black"
+            className={HomeCSS.black}
             ref={(e) => {
               circleBlack = e;
             }}
@@ -109,7 +109,7 @@ const Home = () => {
           ref={(e) => {
             contactButton = e;
           }}
-          className="contact-button"
+          className={HomeCSS.btn}
         >
           <NavLink style={{ textDecoration: "none" }} to="/contact">
             <p>Contact me!</p>
@@ -117,7 +117,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="hero-image">
+      <div className={HomeCSS.heroImg}>
         <img src={portrait} alt="self-portrait" />
       </div>
     </div>
