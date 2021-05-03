@@ -24,6 +24,10 @@
   color: rgb(255, 255, 255);
   line-height: 1.5;
 }
+
+.details p {
+  margin-bottom: 12px;
+}
 .details a {
   text-decoration: none;
 }

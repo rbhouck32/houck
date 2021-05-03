@@ -30,8 +30,11 @@ const About = () => {
           program. Interests include quality food and drink, music, art, coding,
           tinkering with my car,
           <br />
-          and enjoying the great outdoors!
+          and enjoying the great outdoors! I would love to connect with you.
+          Check out my resume and then head over to the contact page and send me
+          a message!
         </p>
+
         <a
           href="../../images/Robert_Houck_-_Web_Developer.pdf"
           title="Download Resume"
