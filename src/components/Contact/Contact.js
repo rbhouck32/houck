@@ -12,6 +12,7 @@ import { TweenMax, Power3 } from "gsap";
 import ContactCSS from "../Contact/Contact.module.css";
 
 const Contact = () => {
+  const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
   const [contactNumber, setContactNumber] = useState("000000");
 
   const generateContactNumber = () => {
@@ -22,7 +23,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
     watch,
   } = useForm({ mode: "onChange" });
@@ -42,8 +43,8 @@ const Contact = () => {
   };
 
   // on submit handler for form
-  const onSubmit = (data) => {
-    console.log("data submit", data);
+  const onSubmit = async (data) => {
+    console.log("submission starting", data);
     generateContactNumber();
     sendForm("default_service", "template_86v5uzu", "#contact-form")
       .then(
@@ -57,6 +58,7 @@ const Contact = () => {
       .catch((error) => {
         console.log(error);
       });
+    setIsSuccessfullySubmitted(true);
     resetCaptcha();
     reset();
   };
@@ -100,7 +102,8 @@ const Contact = () => {
             {...register("user_name", { required: true, maxLength: 30 })}
             type="text"
             name="user_name"
-            placeholder="Name"
+            placeholder="Name Required"
+            disabled={isSubmitting}
           />
           <br />
           {errors.user_email && errors.user_email.type === "required" && (
@@ -113,13 +116,15 @@ const Contact = () => {
             {...register("user_email", { required: true, maxLength: 30 })}
             type="email"
             name="user_email"
-            placeholder="Email"
+            placeholder="Email Required"
+            disabled={isSubmitting}
           />
           <br />
           <textarea
             {...register("message", { required: true, maxLength: 1500 })}
             name="message"
-            placeholder="Message"
+            placeholder="Message Required"
+            disabled={isSubmitting}
           />
           <p className={ContactCSS.messageChars}>
             {messageCharsLeft} characters left
@@ -133,6 +138,8 @@ const Contact = () => {
             ref={(r) => setCaptchaRef(r)}
           />
           <br />
+
+          {isSuccessfullySubmitted && <div role="alert">Success!</div>}
 
           <button data-action="submit" type="submit" className={ContactCSS.btn}>
             Send
