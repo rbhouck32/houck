@@ -27,6 +27,8 @@ const Work = () => {
         {projects.map((project) => (
           <div key={project.id} className={WorkCSS.card}>
             <a href={project.deployedURL}>
+              
+              
               <img src={project.image} alt={project.altText} />
               <h3>{project.projectName}</h3>
             </a>

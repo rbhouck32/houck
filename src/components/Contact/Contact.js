@@ -46,7 +46,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     console.log("submission starting", data);
     generateContactNumber();
-    sendForm("default_service", "template_86v5uzu", "#contact-form")
+    sendForm("contact_form", "template_86v5uzu", "#contact-form")
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
