@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 
 /* eslint-disable import/first */
-import { init, sendForm } from "emailjs-com";
+import { init, sendForm, } from "emailjs-com";
 init("user_IDm9aKjhTDchdKwj6UBRA");
 
 import { TweenMax, Power3 } from "gsap";
@@ -46,7 +46,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     console.log("submission starting", data);
     generateContactNumber();
-    sendForm("default_service", "template_86v5uzu", "#contact-form")
+    sendForm("default_service", "template_86v5uzu", { data }, "#contact-form")
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);

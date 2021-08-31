@@ -19,7 +19,7 @@ const projects = [
       "RamenTatsu is a noodle shop located in Las Vegas, Nevada. I was asked to help create a fully responsive marketing page using only HTML, CSS, and a mock design file.",
     image: RamenTatsu,
     gitRepo: "https://github.com/rbhouck32/RamenTatsu",
-    deployedURL: "http://http://www.ramen-tatsu.com/",
+    deployedURL: "https://http://www.ramen-tatsu.com/",
   },
 ];
 
