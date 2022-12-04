@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
 import AboutCSS from "../About/About.module.css";
-import resume from "../../resume/Robert_Houck_Web_Developer.pdf";
+import resume from "../../resume/Rob_Houck_-_Web_Developer_Resume.pdf";
 
 const About = () => {
   let headerScroll = useRef(null);
@@ -39,7 +39,7 @@ const About = () => {
         <a
           href={resume}
           title="Download Resume"
-          download="Robert_Houck_-_Web_Developer"
+          download="Robert_Houck_-_Web_Developer_Resume"
         >
           <div ref={(e) => (buttonScroll = e)} className={AboutCSS.btn}>
             <p>My Resume</p>
