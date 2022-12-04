@@ -53,80 +53,98 @@ const Skills = () => {
         <h1 ref={(e) => (headerScroll = e)}>My Skills</h1>
       </div>
       <div className={SkillsCSS.skillsContainer}>
-        <div ref={(e) => (skillsScroll1 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon
-            icon={faHtml5}
-            className={SkillsCSS.icon}
-            size="6x"
-          />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll1 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon
+              icon={faHtml5}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>HTML5</p>
           </div>
         </div>
-
-        <div ref={(e) => (skillsScroll2 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon icon={faJs} className={SkillsCSS.icon} size="6x" />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll2 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon icon={faJs} className={SkillsCSS.icon} size="6x" />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>JavaScript</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll3 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon
-            icon={faReact}
-            className={SkillsCSS.icon}
-            size="6x"
-          />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll3 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon
+              icon={faReact}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>React</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll4 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon icon={faNode} className={SkillsCSS.icon} size="6x" />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll4 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon
+              icon={faNode}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>NodeJs</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll5 = e)} className={SkillsCSS.skillWrap}>
-          <div className={SkillsCSS.iconWrap}>
-            <FontAwesomeIcon
-              icon={faLess}
-              className={SkillsCSS.icon}
-              size="6x"
-            />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll5 = e)} className={SkillsCSS.skillWrap}>
+            <div className={SkillsCSS.iconWrap}>
+              <FontAwesomeIcon
+                icon={faLess}
+                className={SkillsCSS.icon}
+                size="6x"
+              />
+            </div>
           </div>
           <div className={SkillsCSS.skillLabel}>
             <p>LESS</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll6 = e)} className={SkillsCSS.skillWrap}>
-          <div className={SkillsCSS.iconWrap}>
-            <FontAwesomeIcon
-              icon={faPython}
-              className={SkillsCSS.icon}
-              size="6x"
-            />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll6 = e)} className={SkillsCSS.skillWrap}>
+            <div className={SkillsCSS.iconWrap}>
+              <FontAwesomeIcon
+                icon={faPython}
+                className={SkillsCSS.icon}
+                size="6x"
+              />
+            </div>
           </div>
-
           <div className={SkillsCSS.skillLabel}>
             <p>Python</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll7 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon
-            icon={faDatabase}
-            className={SkillsCSS.icon}
-            size="6x"
-          />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll7 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon
+              icon={faDatabase}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>RDBMS</p>
           </div>
         </div>
-        <div ref={(e) => (skillsScroll8 = e)} className={SkillsCSS.skillWrap}>
-          <FontAwesomeIcon
-            icon={faCss3Alt}
-            className={SkillsCSS.icon}
-            size="6x"
-          />
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll8 = e)} className={SkillsCSS.skillWrap}>
+            <FontAwesomeIcon
+              icon={faCss3Alt}
+              className={SkillsCSS.icon}
+              size="6x"
+            />
+          </div>
           <div className={SkillsCSS.skillLabel}>
             <p>CSS3</p>
           </div>

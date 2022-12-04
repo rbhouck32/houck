@@ -43,7 +43,7 @@ const SideBar = () => {
       </div>
       <div className={SideBarCSS.iconContainer}>
         <div className={SideBarCSS.iconWrap}>
-          <a href="https://www.linkedin.com/in/robbhouck/">
+          <a href="https://www.linkedin.com/in/robbhouck/" target="_blank">
             <FontAwesomeIcon
               icon={faLinkedinIn}
               className={SideBarCSS.icon}
@@ -52,7 +52,7 @@ const SideBar = () => {
           </a>
         </div>
         <div className={SideBarCSS.iconWrap}>
-          <a href="https://github.com/rbhouck32">
+          <a href="https://github.com/rbhouck32" target="_blank">
             <FontAwesomeIcon
               icon={faGithub}
               className={SideBarCSS.icon}
@@ -61,7 +61,7 @@ const SideBar = () => {
           </a>
         </div>
         <div className={SideBarCSS.iconWrap}>
-          <a href="https://www.instagram.com/cle.cooked/">
+          <a href="https://www.instagram.com/cle.cooked/" target="_blank">
             <FontAwesomeIcon
               icon={faInstagram}
               className={SideBarCSS.icon}
