@@ -23,17 +23,19 @@ const About = () => {
 
   return (
     <div className={AboutCSS.container}>
-      <h1 ref={(e) => (headerScroll = e)}>About</h1>
+      <div className="wrap">
+        <h1 ref={(e) => (headerScroll = e)}>About</h1>
+      </div>
       <section className={AboutCSS.details}>
         <p ref={(e) => (paragraphScroll = e)}>
-          I am a former culinarian of 12 years looking to make a career change.
-          Recently graduated from Lambda School's Full Stack Web Development
-          program. Interests include quality food and drink, music, art, coding,
-          tinkering with my car,
-          <br />
-          and enjoying the great outdoors! I would love to connect with you.
-          Check out my resume and then head over to the contact page and send me
-          a message!
+          Experienced Software Developer with a passion for Front End Web
+          Development. Knowledgeable in user interface, testing, and debugging
+          processes. Equipped with a diverse and promising skill set. Proficient
+          in an assortment of technologies, including JavaScript, J query HTML,
+          CSS, Django, and React with a deep understanding of WCAG compliance
+          and web accessibility. Experienced in Learning Management systems
+          integration using platforms like Canvas, Desire 2 Learn, and
+          Blackboard.
         </p>
 
         <a

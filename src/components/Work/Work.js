@@ -26,12 +26,15 @@ const Work = () => {
       <div className={WorkCSS.projectsContainer}>
         {projects.map((project) => (
           <div key={project.id} className={WorkCSS.card}>
-            <a href={project.deployedURL}>
-              
-              
-              <img src={project.image} alt={project.altText} />
+            <div className={WorkCSS.imgContainer}>
+              <a href={project.deployedURL} target="_blank" rel="noreferrer">
+                <img src={project.image} alt={project.altText} />
+              </a>
+            </div>
+            <div className={WorkCSS.wrap}>
               <h3>{project.projectName}</h3>
-            </a>
+              <p>{project.description}</p>
+            </div>
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import FarmFresh from "../../images/Farm_Fresh.JPG";
-import RamenTatsu from "../../images/Ramen_Tatsu.JPG";
+import api from "../../images/api_pic.png";
+import Mazda from "../../images/Mazda_img.webp";
 
 const projects = [
   {
@@ -10,16 +11,24 @@ const projects = [
     image: FarmFresh,
     altText: "website-thumbnail",
     gitRepo: "https://github.com/Build-Week-Farm-Fresh/Web-UI",
-    deployedURL: "https://hopeful-varahamihira-431872.netlify.app",
+    deployedURL: "https://web-ui-fresh-farm.vercel.app/",
   },
   {
     id: 2,
-    projectName: "RamenTatsu",
+    projectName: "African Marketplace API Documentation",
     description:
-      "RamenTatsu is a noodle shop located in Las Vegas, Nevada. I was asked to help create a fully responsive marketing page using only HTML, CSS, and a mock design file.",
-    image: RamenTatsu,
-    gitRepo: "https://github.com/rbhouck32/RamenTatsu",
-    deployedURL: "https://http://www.ramen-tatsu.com/",
+      "Built small API using Node.JS and KNEX. Documented using swagger docs and YAML",
+    image: api,
+    gitRepo: "https://github.com/rbhouck32/african-marketplace-swagger-doc",
+    deployedURL: "https://african-marketplace-swagger-doc.vercel.app/",
+  },
+  {
+    id: 3,
+    projectName: "Niki Smells Like Pudding Cakes",
+    description: "She loves Miatas and shit and stuff!",
+    image: Mazda,
+    gitRepo: "",
+    deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
   },
 ];
 

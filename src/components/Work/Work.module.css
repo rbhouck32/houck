@@ -1,5 +1,5 @@
 .container {
-  width: 85%;
+  width: 100%;
   height: 100vh;
   background-color: #1d1d1d;
   border-left: 1px solid rgba(144, 144, 150, 0.25);
@@ -21,14 +21,27 @@
   justify-content: space-evenly;
 }
 
+.imgContainer {
+  max-height: 169px;
+  margin: 8px 0
+}
+
 .card {
   width: 30%;
-  height: 100px;
+  min-height: 300px;
+  display: flex;
+  flex-flow: column;
   text-align: center;
 }
 
+
+
 .card img {
   width: 100%;
+  max-height: 169px;
+  object-fit: cover;
+  
+  
 }
 
 .card img:hover {
@@ -49,5 +62,8 @@
 }
 
 .card p {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 8px;
+  line-height: 1.4;
   color: rgb(255, 255, 255);
 }
