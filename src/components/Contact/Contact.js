@@ -15,6 +15,7 @@ const Contact = () => {
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
   const [contactNumber, setContactNumber] = useState("000000");
 
+  //define form so we can use form.current to pass data to sendForm function for emailJS
   let form = useRef();
 
   const generateContactNumber = () => {
@@ -57,10 +58,10 @@ const Contact = () => {
 
     generateContactNumber();
     sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
+      process.env.production.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.production.REACT_APP_EMAIL_JS_TEMPLATE_ID,
       form.current,
-      process.env.REACT_APP_PUBLIC_KEY
+      process.env.production.REACT_APP_EMAIL_JS_PUBLIC_KEY
     )
       .then(
         function (response) {
@@ -147,7 +148,7 @@ const Contact = () => {
           <br />
           <ReCAPTCHA
             className="g-recaptcha"
-            sitekey="6LfdkB8qAAAAAGnStx2mKqHsX9_Zwis7g9P5HgmT"
+            sitekey={process.env.production.REACT_APP_RECAPTCHA_KEY}
             size="compact"
             onChange={onChange}
             ref={(r) => setCaptchaRef(r)}
