@@ -4,17 +4,6 @@ import Mazda from "../../images/Mazda_img.webp";
 
 const projects = [
   {
-    id: 1,
-    projectName: "Understanding WCAG Conpliance",
-    description:
-      "During a recent audit I was tasked with updating legacy code to be WCAG 2.2 compliant",
-    blog_body: "This is the body of the blog",
-    image: FarmFresh,
-    altText: "website-thumbnail",
-    gitRepo: "https://github.com/Build-Week-Farm-Fresh/Web-UI",
-    deployedURL: "https://web-ui-fresh-farm.vercel.app/",
-  },
-  {
     id: 2,
     projectName: "African Marketplace API Documentation",
     description:
@@ -25,15 +14,28 @@ const projects = [
   },
   {
     id: 3,
-    projectName: "Niki Smells Like Pudding Cakes",
-    description: "She loves Miatas and shit and stuff!",
+    projectName: "Coming Soon",
+    description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
+    image: Mazda,
+    gitRepo: "",
+    deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
+  },
+  {
+    id: 4,
+    projectName: "Coming Soon",
+    description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
+    image: Mazda,
+    gitRepo: "",
+    deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
+  },
+  {
+    id: 5,
+    projectName: "Coming Soon",
+    description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
     image: Mazda,
     gitRepo: "",
     deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
   },
 ];
 
-
-
 export default projects;
-
