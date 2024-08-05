@@ -5,9 +5,10 @@ import Mazda from "../../images/Mazda_img.webp";
 const projects = [
   {
     id: 1,
-    projectName: "Fresh Farm Produce",
+    projectName: "Understanding WCAG Conpliance",
     description:
-      "Fresh Farm Produce is a fully responsive static marketing web page created with a deskstop first approach in mind, using only HTML and CSS. ",
+      "During a recent audit I was tasked with updating legacy code to be WCAG 2.2 compliant",
+    blog_body: "This is the body of the blog",
     image: FarmFresh,
     altText: "website-thumbnail",
     gitRepo: "https://github.com/Build-Week-Farm-Fresh/Web-UI",
@@ -32,4 +33,7 @@ const projects = [
   },
 ];
 
+
+
 export default projects;
+

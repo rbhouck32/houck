@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+//import axios from "axios";
 
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 
 /* eslint-disable import/first */
-import { init, sendForm, } from "emailjs-com";
-init("user_IDm9aKjhTDchdKwj6UBRA");
+import { sendForm } from "emailjs-com";
 
 import { TweenMax, Power3 } from "gsap";
 
@@ -15,18 +15,27 @@ const Contact = () => {
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
   const [contactNumber, setContactNumber] = useState("000000");
 
+  let form = useRef();
+
   const generateContactNumber = () => {
     const numStr = "000000" + ((Math.random() * 1000000) | 0);
     setContactNumber(numStr.substring(numStr.length - 6));
   };
+
   // react hook forms variables
   const {
     register,
-    handleSubmit,
     formState: { errors, isSubmitting },
     reset,
     watch,
-  } = useForm({ mode: "onChange" });
+  } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      user_name: "",
+      user_email: "",
+      message: "",
+    },
+  });
 
   // Captcha Implementation -----------
   let captcha;
@@ -43,10 +52,16 @@ const Contact = () => {
   };
 
   // on submit handler for form
-  const onSubmit = async (data) => {
-    console.log("submission starting", data);
+  const onSubmit = async (data, e) => {
+    console.log("submission starting: This is our console log", data);
+
     generateContactNumber();
-    sendForm("default_service", "template_86v5uzu", { data }, "#contact-form")
+    sendForm(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_PUBLIC_KEY
+    )
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
@@ -90,7 +105,7 @@ const Contact = () => {
         <div className={ContactCSS.headerWrap}>
           <h1 ref={(e) => (headerScroll = e)}>Contact</h1>
         </div>
-        <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+        <form ref={form} id="contact-form" onSubmit={onSubmit}>
           <input type="hidden" name="contact_number" value={contactNumber} />
           {errors.user_name && errors.user_name.type === "required" && (
             <div role="alert">
@@ -132,7 +147,7 @@ const Contact = () => {
           <br />
           <ReCAPTCHA
             className="g-recaptcha"
-            sitekey="6LfSsLkaAAAAAKTFhslKNmQsDAeZzUf9HYoPIRjz"
+            sitekey="6LfdkB8qAAAAAGnStx2mKqHsX9_Zwis7g9P5HgmT"
             size="compact"
             onChange={onChange}
             ref={(r) => setCaptchaRef(r)}
