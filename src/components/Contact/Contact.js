@@ -114,37 +114,58 @@ const Contact = () => {
               <br />
             </div>
           )}
-          <input
-            {...register("user_name", { required: true, maxLength: 30 })}
-            type="text"
-            name="user_name"
-            placeholder="Name Required"
-            disabled={isSubmitting}
-          />
+
+          <div className={ContactCSS.flexColumn}>
+            <label htmlFor="user_name_input" className={ContactCSS.label}>
+              Name
+            </label>
+            <input
+              {...register("user_name", { required: true, maxLength: 30 })}
+              id="user_name_input"
+              type="text"
+              name="user_name"
+              placeholder="Name Required"
+              disabled={isSubmitting}
+            />
+            <br />
+            {errors.user_email && errors.user_email.type === "required" && (
+              <div role="alert">
+                **Email is required
+                <br />
+              </div>
+            )}
+          </div>
+
+          <div className={ContactCSS.flexColumn}>
+            <label htmlFor="email_input" className={ContactCSS.label}>
+              Email
+            </label>
+            <input
+              {...register("user_email", { required: true, maxLength: 30 })}
+              id="email_input"
+              type="email"
+              name="user_email"
+              placeholder="Email Required"
+              disabled={isSubmitting}
+            />
+          </div>
           <br />
-          {errors.user_email && errors.user_email.type === "required" && (
-            <div role="alert">
-              **Email is required
-              <br />
-            </div>
-          )}
-          <input
-            {...register("user_email", { required: true, maxLength: 30 })}
-            type="email"
-            name="user_email"
-            placeholder="Email Required"
-            disabled={isSubmitting}
-          />
-          <br />
-          <textarea
-            {...register("message", { required: true, maxLength: 1500 })}
-            name="message"
-            placeholder="Message Required"
-            disabled={isSubmitting}
-          />
-          <p className={ContactCSS.messageChars}>
-            {messageCharsLeft} characters left
-          </p>
+          <div className={ContactCSS.flexColumn}>
+            <label htmlFor="message_input" className={ContactCSS.label}>
+              Add a Message!
+            </label>
+            <textarea
+              {...register("message", { required: true, maxLength: 1500 })}
+              id="message_input"
+              name="message"
+              placeholder="Message Required"
+              disabled={isSubmitting}
+            />
+            <p className={ContactCSS.messageChars}>
+              {messageCharsLeft} characters left
+            </p>
+          </div>
+
           <br />
           <ReCAPTCHA
             className="g-recaptcha"

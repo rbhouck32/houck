@@ -25,6 +25,19 @@
   flex-direction: column;
 }
 
+.label {
+  margin-bottom: 8px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 .information h3 {
   margin-top: 43%;
   margin-bottom: 5%;
