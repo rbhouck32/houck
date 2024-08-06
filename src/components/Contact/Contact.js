@@ -148,7 +148,7 @@ const Contact = () => {
           <br />
           <ReCAPTCHA
             className="g-recaptcha"
-            sitekey={process.env.production.REACT_APP_RECAPTCHA_KEY}
+            sitekey="6LecYCAqAAAAAF9bzi_hYZ2Em_mFZ-TMZs3IUgli"
             size="compact"
             onChange={onChange}
             ref={(r) => setCaptchaRef(r)}
