@@ -1,4 +1,3 @@
-import FarmFresh from "../../images/Farm_Fresh.JPG";
 import api from "../../images/api_pic.png";
 import Mazda from "../../images/Mazda_img.webp";
 

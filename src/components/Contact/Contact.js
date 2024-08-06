@@ -58,10 +58,10 @@ const Contact = () => {
 
     generateContactNumber();
     sendForm(
-      process.env.production.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.production.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
       form.current,
-      process.env.production.REACT_APP_EMAIL_JS_PUBLIC_KEY
+      process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
     )
       .then(
         function (response) {
