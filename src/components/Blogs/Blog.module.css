@@ -1,0 +1,25 @@
+
+.container {
+    width: 100%;
+    height: vh 1;
+    background-color: #1d1d1d;
+    border-left: 1px solid rgba(144, 144, 150, 0.25);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headerWrap {
+    margin: 5% 5% 0 5%;
+    padding: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+}
+
+  .pageBreak {
+    width: 100%;
+    border-bottom: 2px solid rgba(144, 144, 150, 0.25);
+  }
+  

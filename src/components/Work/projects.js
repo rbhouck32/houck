@@ -1,5 +1,4 @@
 import api from "../../images/api_pic.png";
-import Mazda from "../../images/Mazda_img.webp";
 
 const projects = [
   {
@@ -15,7 +14,7 @@ const projects = [
     id: 3,
     projectName: "Coming Soon",
     description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
-    image: Mazda,
+    image: "",
     gitRepo: "",
     deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
   },
@@ -23,7 +22,7 @@ const projects = [
     id: 4,
     projectName: "Coming Soon",
     description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
-    image: Mazda,
+    image: "",
     gitRepo: "",
     deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
   },
@@ -31,7 +30,7 @@ const projects = [
     id: 5,
     projectName: "Coming Soon",
     description: "Coming Soon Coming Soon Coming Soon Coming Soon Coming Soon",
-    image: Mazda,
+    image: "",
     gitRepo: "",
     deployedURL: "https://www.mazdausa.com/vehicles/mx-5-miata-rf",
   },

@@ -23,31 +23,36 @@ const About = () => {
 
   return (
     <div className={AboutCSS.container}>
-      <div className="wrap">
-        <h1 ref={(e) => (headerScroll = e)}>About</h1>
-      </div>
-      <section className={AboutCSS.details}>
-        <p ref={(e) => (paragraphScroll = e)}>
-          Experienced Software Developer with a passion for Front End Web
-          Development. Knowledgeable in user interface, testing, and debugging
-          processes. Equipped with a diverse and promising skill set. Proficient
-          in an assortment of technologies, including JavaScript, J query HTML,
-          CSS, Django, and React with a deep understanding of WCAG compliance
-          and web accessibility. Experienced in Learning Management systems
-          integration using platforms like Canvas, Desire 2 Learn, and
-          Blackboard.
-        </p>
-
-        <a
-          href={resume}
-          title="Download Resume"
-          download="Robert_Houck_-_Web_Developer_2024"
-        >
-          <div ref={(e) => (buttonScroll = e)} className={AboutCSS.btn}>
-            <p>My Resume</p>
+      <div className="flex-container">
+        <div className={AboutCSS.headerWrap}>
+          <h1 ref={(e) => (headerScroll = e)}>About</h1>
+        </div>
+        <section className={AboutCSS.details}>
+          <div className={AboutCSS.aboutContainer}>
+            <p ref={(e) => (paragraphScroll = e)}>
+              Experienced Software Developer with a passion for Front End Web
+              Development. Knowledgeable in user interface, testing, and
+              debugging processes. Equipped with a diverse and promising skill
+              set. Proficient in an assortment of technologies, including
+              JavaScript, J query HTML, CSS, Django, and React with a deep
+              understanding of WCAG compliance and web accessibility.
+              Experienced in Learning Management systems integration using
+              platforms like Canvas, Desire 2 Learn, and Blackboard.
+            </p>
           </div>
-        </a>
-      </section>
+          <div className="flex-item">
+            <a
+              href={resume}
+              title="Download Resume"
+              download="Robert_Houck_-_Web_Developer_2024"
+            >
+              <div ref={(e) => (buttonScroll = e)} className={AboutCSS.btn}>
+                <p>My Resume</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

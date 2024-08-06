@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact.js";
 import SideBar from "./components/SideBar/SideBar.js";
 import About from "./components/About/About.js";
 import Work from "./components/Work/Work.js";
+import Blog from "./components/Blogs/Blog.js";
 
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
       <Route path="/work" component={Work} />
+      <Route path="/blog" component={Blog} />
     </div>
   );
 }

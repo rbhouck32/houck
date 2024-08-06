@@ -3,6 +3,7 @@ import SkillsCSS from "../Skills/Skills.module.css";
 
 import { TweenMax, Power3 } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { django, bootstrap, figma, jquery } from "../../images/imageIndex.js";
 import {
   faHtml5,
   faJs,
@@ -24,6 +25,10 @@ const Skills = () => {
   let skillsScroll6 = useRef(null);
   let skillsScroll7 = useRef(null);
   let skillsScroll8 = useRef(null);
+  let skillsScroll9 = useRef(null);
+  let skillsScroll10 = useRef(null);
+  let skillsScroll11 = useRef(null);
+  let skillsScroll12 = useRef(null);
 
   useEffect(() => {
     TweenMax.staggerFrom(
@@ -37,6 +42,10 @@ const Skills = () => {
         skillsScroll6,
         skillsScroll7,
         skillsScroll8,
+        skillsScroll9,
+        skillsScroll10,
+        skillsScroll11,
+        skillsScroll12,
       ],
       4,
       {
@@ -127,6 +136,14 @@ const Skills = () => {
         </div>
         <div className={SkillsCSS.flex_wrap}>
           <div ref={(e) => (skillsScroll7 = e)} className={SkillsCSS.skillWrap}>
+            <img src={django} />
+          </div>
+          <div className={SkillsCSS.skillLabel}>
+            <p>Django</p>
+          </div>
+        </div>
+        <div className={SkillsCSS.flex_wrap}>
+          <div ref={(e) => (skillsScroll8 = e)} className={SkillsCSS.skillWrap}>
             <FontAwesomeIcon
               icon={faDatabase}
               className={SkillsCSS.icon}
@@ -138,7 +155,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={SkillsCSS.flex_wrap}>
-          <div ref={(e) => (skillsScroll8 = e)} className={SkillsCSS.skillWrap}>
+          <div ref={(e) => (skillsScroll9 = e)} className={SkillsCSS.skillWrap}>
             <FontAwesomeIcon
               icon={faCss3Alt}
               className={SkillsCSS.icon}
@@ -147,6 +164,39 @@ const Skills = () => {
           </div>
           <div className={SkillsCSS.skillLabel}>
             <p>CSS3</p>
+          </div>
+        </div>
+        <div className={SkillsCSS.flex_wrap}>
+          <div
+            ref={(e) => (skillsScroll10 = e)}
+            className={SkillsCSS.skillWrap}
+          >
+            <img src={bootstrap} />
+          </div>
+          <div className={SkillsCSS.skillLabel}>
+            <p>Bootstrap</p>
+          </div>
+        </div>
+        <div className={SkillsCSS.flex_wrap}>
+          <div
+            ref={(e) => (skillsScroll11 = e)}
+            className={SkillsCSS.skillWrap}
+          >
+            <img src={figma} />
+          </div>
+          <div className={SkillsCSS.skillLabel}>
+            <p>Figma</p>
+          </div>
+        </div>
+        <div className={SkillsCSS.flex_wrap}>
+          <div
+            ref={(e) => (skillsScroll12 = e)}
+            className={SkillsCSS.skillWrap}
+          >
+            <img src={jquery} />
+          </div>
+          <div className={SkillsCSS.skillLabel}>
+            <p>jQuery</p>
           </div>
         </div>
       </div>

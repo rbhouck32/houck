@@ -20,6 +20,11 @@ const SideBar = () => {
       </NavLink>
 
       <div className="nav-wrap">
+        <NavLink style={{ textDecoration: "none" }} to="/">
+          <div className={SideBarCSS.navItem}>
+            <p>Home</p>
+          </div>
+        </NavLink>
         <NavLink style={{ textDecoration: "none" }} to="/about">
           <div className={SideBarCSS.navItem}>
             <p>About</p>
@@ -33,6 +38,11 @@ const SideBar = () => {
         <NavLink style={{ textDecoration: "none" }} to="/work">
           <div className={SideBarCSS.navItem}>
             <p>My Work</p>
+          </div>
+        </NavLink>
+        <NavLink style={{ textDecoration: "none" }} to="/blog">
+          <div className={SideBarCSS.navItem}>
+            <p>Blog</p>
           </div>
         </NavLink>
         <NavLink style={{ textDecoration: "none" }} to="/contact">

@@ -105,16 +105,16 @@ const Home = () => {
             }}
           ></div>
         </div>
-        <div
-          ref={(e) => {
-            contactButton = e;
-          }}
-          className={HomeCSS.btn}
-        >
-          <NavLink style={{ textDecoration: "none" }} to="/contact">
+        <NavLink style={{ textDecoration: "none" }} to="/contact">
+          <div
+            ref={(e) => {
+              contactButton = e;
+            }}
+            className={HomeCSS.btn}
+          >
             <p>Contact me!</p>
-          </NavLink>
-        </div>
+          </div>
+        </NavLink>
       </div>
 
       <div className={HomeCSS.heroImg}>

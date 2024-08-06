@@ -3,13 +3,13 @@
   background-color: #1d1d1d;
   border-left: 0.5px solid rgba(144, 144, 150, 0.25);
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
-.container h1 {
-  margin-top: 13%;
-  margin-left: 5%;
-  margin-bottom: 5%;
+.headerWrap {
+  margin: 0 5%;
+  padding: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: 4rem;
@@ -32,8 +32,13 @@
   text-decoration: none;
 }
 
+
+.aboutContainer {
+  margin-bottom: 24px;
+}
+
 .btn {
-  margin-top: 5%;
+  
   text-align: center;
   width: 200px;
   height: 50px;
